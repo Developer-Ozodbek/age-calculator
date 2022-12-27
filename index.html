@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age calculator</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(75deg, #2fabfd, blue);
+        }
+        .container{
+            background: #f2f2f3;
+            width: 400px;
+        }
+        header {
+            display: flex;
+            justify-content: space-around;
+            color: #028fec;
+            font-family: sans-serif;
+        }
+        input{
+            width: 5rem;
+            padding: .3em;
+        }
+        h2{
+            text-align: center;
+            font-family: sans-serif;
+            background-color: #fff;
+            margin-bottom: 1.5rem;
+            padding: 15px;
+            border-bottom: 2px solid #ccc;
+        }
+        input{
+            margin-top: .7em;
+            border:2px solid #028fec;
+            outline: none;
+        }
+        .btn input{
+            position: relative;
+            left: 50%;
+            transform: translateX(-52.5px);
+            background: #028fec;
+            margin-top: 2rem;
+            width: 105px;
+            height: 45px;
+            font-size: 15px;
+            border-radius: 7px;
+            font-weight: 800;
+            margin-bottom: 2rem;
+            color: #fff;
+        }
+        .btn input:hover{
+            box-shadow: 0 0 4px 4px #028eec76;
+        }
+        footer{
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- <div class="h2"> -->
+            <h2>Age calculator</h2>
+        <!-- </div> -->
+        <header>
+            <div class="day inpBox"><span>Day</span><br>
+                <input type="text" name="day" id="day">
+            </div>
+            <div class="month inpBox"><span>Month</span><br>
+                <input type="text" name="month" id="month">
+            </div>
+            <div class="year inpBox"><span>Year</span><br>
+                <input type="text" name="year" id="year">
+            </div>
+        </header>
+        
+        <footer>
+            <div class="btn">
+                <input type="button" value="Calculate">
+            </div>
+            
+            <h3 onload="showAge()">your age is</h3>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
