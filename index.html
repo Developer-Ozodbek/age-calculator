@@ -17,8 +17,10 @@
             align-items: center;
             justify-content: center;
             background: linear-gradient(75deg, #2fabfd, blue);
+            font-family: sans-serif;
         }
         .container{
+            border-radius: 15px;
             background: #f2f2f3;
             width: 400px;
         }
@@ -33,17 +35,24 @@
             padding: .3em;
         }
         h2{
+            border-radius: 15px;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
             text-align: center;
             font-family: sans-serif;
             background-color: #fff;
             margin-bottom: 1.5rem;
             padding: 15px;
             border-bottom: 2px solid #ccc;
+            color: #028fec;
         }
         input{
             margin-top: .7em;
-            border:2px solid #028fec;
             outline: none;
+            transition: all .3 ease;
+        }
+        input:valid{
+            border: 2px solid #2fabfd;
         }
         .btn input{
             position: relative;
@@ -58,8 +67,11 @@
             font-weight: 800;
             margin-bottom: 2rem;
             color: #fff;
+            transition: all .5s ease;
         }
         .btn input:hover{
+            background: #fff;
+            color: #028fec;
             box-shadow: 0 0 4px 4px #028eec76;
         }
         footer{
@@ -69,9 +81,7 @@
 </head>
 <body>
     <div class="container">
-        <!-- <div class="h2"> -->
-            <h2>Age calculator</h2>
-        <!-- </div> -->
+        <h2>Age calculator</h2>
         <header>
             <div class="day inpBox"><span>Day</span><br>
                 <input type="text" name="day" id="day">
@@ -89,7 +99,7 @@
                 <input type="button" value="Calculate">
             </div>
             
-            <h3 onload="showAge()">your age is</h3>
+            <h3 onload="showAge()">your age is:</h3>
         </footer>
     </div>
     <script src="script.js"></script>

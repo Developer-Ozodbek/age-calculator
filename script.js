@@ -11,6 +11,9 @@ y = date.getFullYear();
 
 
 submitBtn.addEventListener('click', ()=> {
-    calculatedAge.innerHTML = `sizning yoshingiz ${y - year.value}-yosh, ${m - month.value}-oy, ${d - day.value}-kun`
+    calculatedAge.innerHTML = `your age is ${y - year.value}-year, ${m - month.value}-moth, ${d - day.value}-day`
+    if(day.value === '' ?? month.value === '' ?? year.value === ''){
+        calculatedAge.innerHTML = 'ERROR: please, input it'
+    }
 })
 
